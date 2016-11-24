@@ -14,7 +14,14 @@
 
     <p><g:message message="${nome}" /></p>
 
-    <g:link controller="Fornecedor" action="index" >Novo Fornecedor</g:link>
+<form method="post"action="<g:createLink controller="fornecedor" action="index" />">
+    <input type="submit" value="Novo Fornecedor"/>
+</form>
+
+<form method="post"action="<g:createLink controller="categoria" action="index" />">
+    <input type="submit" value="Categoria"/>
+</form>
+
 
 </body>
 </html>

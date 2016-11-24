@@ -7,11 +7,18 @@
 
 <body>
 
+<form method="POST"action="<g:createLink controller="fornecedor" action="index" />">
+
+    <button class="btn btn-default" type="submit">Home</button>
+</form>
+
     <h1>Categoria</h1>
 
     <p><g:message message="${nome}"/> </p>
 
-    <p><g:link controller="Categoria" action="index" >Nova Categoria</g:link> </p>
+<form method="post"action="<g:createLink controller="fornecedor" action="index" />">
+    <input type="submit" value="Nova Categoria"/>
+</form>
 
 
 
