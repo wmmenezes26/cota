@@ -7,9 +7,10 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/fornecedor/index")
+        "/"(view:"index")
         "500"(view:'/error')
 
+        "/fornecedor"(controller: 'fornecedor', action: 'index')
 
 	}
 }

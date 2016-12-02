@@ -2,26 +2,31 @@
 <html>
 <head>
 
-    <meta name="layout" content="cota"/>
+    <meta name="layout" content="main"/>
     <title>Fornecedor</title>
 </head>
-
+ <meta name="layout" content="main"/>
 <body>
-
-    <h1>Nome do Fornecedor:</h1>
+    <br/>
+    <br/>
+<br/>
+<h1>Nome do Fornecedor:</h1>
 
     <h1><g:message message="${secao}" /></h1>
 
     <p><g:message message="${nome}" /></p>
 
-<form method="post"action="<g:createLink controller="fornecedor" action="index" />">
-    <input type="submit" value="Novo Fornecedor"/>
+<form method="POST" action="<g:createLink controller="fornecedor" action="index"/>" class="form-inline">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Novo Fornecedor</button>
+    </div>
 </form>
-
-<form method="post"action="<g:createLink controller="categoria" action="index" />">
-    <input type="submit" value="Categoria"/>
+<br/>
+<form method="POST" action="<g:createLink controller="categoria" action="index"/>" class="form-inline">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Categoria</button>
+    </div>
 </form>
-
 
 </body>
 </html>

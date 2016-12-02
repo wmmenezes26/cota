@@ -12,10 +12,12 @@
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap-responsive.min.css')}" type="text/css">
 		<g:layoutHead/>
+    <br/>
+    <br/>
 	</head>
 	<body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        %{--< </ class="container">\--}%
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -23,13 +25,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Project name</a>
+                    <a class="navbar-brand" href="${createLink(uri:'/')}">Sistema de Cotação </a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="active"><a href="${createLink(uri:'/')}">Home</a></li>
+                    <li><a href="${createLink(controller: 'fornecedor', action: 'index')}">Fornecedor</a></li>
+                    <li><a href="${createLink(controller: 'categoria', action: 'index')}">Categoria</a></li>
+                    <li><a href="${createLink(controller: 'item', action: 'index')}">Item</a></li>
+                    <li><a href="${createLink(controller: 'moeda', action: 'moedaindex')}">Moeda</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -37,4 +41,4 @@
 		<g:layoutBody/>
 	<script rel="script" href="${resource(dir: 'js', file: 'bootstrap.js')}" type="application/javascript"></script>
 	</body>
-</html>
+    </html>
